@@ -68,29 +68,29 @@ docker compose up --build
 
 ### Após a inicialização:
 
-Serviço	URL
-API (Swagger)	http://localhost:8000/docs
-Banco de Dados	localhost:5432
+- Serviço	URL
+- API (Swagger)	http://localhost:8000/docs
+- Banco de Dados	localhost:5432
 
 ## 🔧 Variáveis de Ambiente
 
-As variáveis estão definidas diretamente no docker-compose.yml.
-Para ambientes mais avançados (produção), recomenda-se utilizar um arquivo .env.
+- As variáveis estão definidas diretamente no docker-compose.yml.
+- Para ambientes mais avançados (produção), recomenda-se utilizar um arquivo .env.
 
 ## 🧠 Decisões de Arquitetura
 
-Cada serviço possui seu próprio repositório
-Comunicação entre serviços ocorre via rede interna do Docker
-O Scraper envia dados para a API via HTTP
-A API valida e persiste os dados no PostgreSQL
-A infraestrutura é gerenciada exclusivamente pelo Docker Compose
-Essa abordagem segue princípios de separação de responsabilidades e permite que cada serviço seja versionado e implantado de forma independente.
+- Cada serviço possui seu próprio repositório
+- Comunicação entre serviços ocorre via rede interna do Docker
+- O Scraper envia dados para a API via HTTP
+- A API valida e persiste os dados no PostgreSQL
+- A infraestrutura é gerenciada exclusivamente pelo Docker Compose
+- Essa abordagem segue princípios de separação de responsabilidades e permite que cada serviço seja versionado e implantado de forma independente.
 
 ## 📌 Observações Importantes
 
-O Scraper é executado como serviço independente
-A API não depende do Scraper para funcionar
-Este repositório existe apenas para orquestração da infraestrutura
+- O Scraper é executado como serviço independente
+- A API não depende do Scraper para funcionar
+- Este repositório existe apenas para orquestração da infraestrutura
 
 
 

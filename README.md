@@ -35,9 +35,9 @@ Antes de executar este projeto, é necessário clonar os seguintes repositórios
 Todos os repositórios devem estar no mesmo nível:
 
 workspace/
-├── nytimes-api/
-├── nytimes-scraper/
-└── nytimes-orchestration/
+ - nytimes-api/
+ - nytimes-scraper/
+ - nytimes-orchestration/
 
 
 ⚠️ Os nomes das pastas devem corresponder exatamente aos caminhos definidos no `docker-compose.yml`.

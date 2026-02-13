@@ -1,0 +1,43 @@
+services:
+
+  db:
+    image: postgres:15
+    container_name: nytimes-db
+    environment:
+      POSTGRES_DB: nytimes
+      POSTGRES_USER: nytimes
+      POSTGRES_PASSWORD: nytimes
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  api:
+    build: ./prj_python-api-nytimes/api
+    container_name: nytimes-api
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://nytimes:nytimes@db:5432/nytimes
+    ports:
+      - "8000:8000"
+
+
+  scraper:
+    build: ./prj_python-rpa-nytimes-scraper
+    container_name: nytimes-scraper 
+    depends_on:
+      - api
+    environment:
+      API_BASE_URL: http://api:8000
+
+
+
+volumes:
+  pgdata:
+
+
+
+
+
+

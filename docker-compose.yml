@@ -13,7 +13,7 @@ services:
       - "5432:5432"
 
   api:
-    build: ./prj_python-api-nytimes/api
+    build: ../prj_python-api-nytimes/api
     container_name: nytimes-api
     depends_on:
       - db
@@ -24,7 +24,7 @@ services:
 
 
   scraper:
-    build: ./prj_python-rpa-nytimes-scraper
+    build: ../prj_python-rpa-nytimes-scraper
     container_name: nytimes-scraper 
     depends_on:
       - api

@@ -49,9 +49,9 @@ workspace/
 ### 1️⃣ Clonar os repositórios
 
 ```bash
-git clone https://github.com/SEU_USUARIO/nytimes-api
-git clone https://github.com/SEU_USUARIO/nytimes-scraper
-git clone https://github.com/SEU_USUARIO/nytimes-orchestration
+git clone https://github.com/fellipeafonseca/prj_python-api-nytimes
+git clone https://github.com/fellipeafonseca/prj_python-rpa-nytimes-scraper
+git clone https://github.com/fellipeafonseca/nytimes-orchestration
 ```
 
 2️⃣ Acessar a pasta de orquestração
@@ -68,7 +68,7 @@ docker compose up --build
 
 ### Após a inicialização:
 
-- Serviço	URL
+
 - API (Swagger)	http://localhost:8000/docs
 - Banco de Dados	localhost:5432
 

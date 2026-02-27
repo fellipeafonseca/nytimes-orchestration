@@ -3,10 +3,16 @@ services:
   db:
     image: postgres:15
     container_name: nytimes-db
+    restart: always
     environment:
       POSTGRES_DB: nytimes
-      POSTGRES_USER: nytimes
-      POSTGRES_PASSWORD: nytimes
+      POSTGRES_USER_FILE: /run/secrets/db_user
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+
+    secrets:
+      - db_user
+      - db_password
+
     volumes:
       - pgdata:/var/lib/postgresql/data
     ports:
@@ -31,7 +37,11 @@ services:
     environment:
       API_BASE_URL: http://api:8000
 
-
+secrets:
+  db_user:
+    file: ./secrets/db_user.txt
+  db_password:
+    file: ./secrets/db_password.txt
 
 volumes:
   pgdata:

@@ -54,6 +54,22 @@ git clone https://github.com/fellipeafonseca/prj_python-rpa-nytimes-scraper
 git clone https://github.com/fellipeafonseca/nytimes-orchestration
 ```
 
+
+---
+
+
+###  2️⃣ 🔐 Configuração de Secrets
+
+```bash
+mkdir secrets
+
+read -p "DB User: " user
+echo $user > secrets/db_user.txt
+
+read -s -p "DB Password: " pass
+echo $pass > secrets/db_password.txt
+```
+
 2️⃣ Acessar a pasta de orquestração
 ```
 cd nytimes-orchestration
